@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	lib "github.com/masaruz/engine-lib"
+	"github.com/masaruz/engine-lib"
 )
 
 type form = struct {
