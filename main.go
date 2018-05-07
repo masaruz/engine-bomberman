@@ -27,17 +27,17 @@ func (g game) On(name string, ack func(msg form)) {
 }
 
 func (g game) Start() *lib.Error {
-	fmt.Println("Start")
+	fmt.Println("Bomberman Started")
 	return nil
 }
 
 func (g game) Pause() *lib.Error {
-	fmt.Println("Pause")
+	fmt.Println("Bomberman Paused")
 	return nil
 }
 
 func (g game) Finish() *lib.Error {
-	fmt.Println("Finish")
+	fmt.Println("Bomberman Finished")
 	return nil
 }
 
