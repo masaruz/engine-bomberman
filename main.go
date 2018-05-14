@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/masaruz/engine-lib"
 )
 
 type form = struct {
@@ -26,18 +24,33 @@ func (g game) On(name string, ack func(msg form)) {
 	})
 }
 
-func (g game) Start() *lib.Error {
+func (g game) Init() error {
+	fmt.Println("Bomberman Initiated")
+	return nil
+}
+
+func (g game) Start() error {
 	fmt.Println("Bomberman Started")
 	return nil
 }
 
-func (g game) Pause() *lib.Error {
+func (g game) Update() error {
+	fmt.Println("Bomberman Updated")
+	return nil
+}
+
+func (g game) Pause() error {
 	fmt.Println("Bomberman Paused")
 	return nil
 }
 
-func (g game) Finish() *lib.Error {
+func (g game) Finish() error {
 	fmt.Println("Bomberman Finished")
+	return nil
+}
+
+func (g game) Shutdown() error {
+	fmt.Println("Bomberman Shutdown")
 	return nil
 }
 
