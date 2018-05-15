@@ -34,8 +34,8 @@ func (g game) Start() error {
 	return nil
 }
 
-func (g game) Update() error {
-	fmt.Println("Bomberman Updated")
+func (g game) Update(msg string) error {
+	fmt.Printf("Bomberman Updated With Message %s\n", msg)
 	return nil
 }
 
