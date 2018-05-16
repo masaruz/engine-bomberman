@@ -2,15 +2,13 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/masaruz/engine-lib"
 )
 
-type form = struct {
-	Header    string
-	Body      string
-	Signature string
-}
+type form = lib.Form
 
-type ack = func(msg form)
+type ack = lib.Ack
 
 type game struct{}
 
