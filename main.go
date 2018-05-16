@@ -23,7 +23,7 @@ func (g game) On(name string, ack func(msg form)) {
 }
 
 func (g game) Init() error {
-	fmt.Println("Bomberman Initiated")
+	fmt.Println("Bomberman Inited")
 	return nil
 }
 
