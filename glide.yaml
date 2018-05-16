@@ -1,0 +1,3 @@
+package: engine-bomberman
+import:
+- package: github.com/masaruz/engine-lib
