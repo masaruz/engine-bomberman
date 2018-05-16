@@ -1,6 +1,6 @@
 hash: d840654c1a5c27ff8a0f3eeb2e4fd7daf26d67e6dd75d59c44da7bd742020057
-updated: 2018-05-16T14:16:46.952149+07:00
+updated: 2018-05-16T18:06:06.557847+07:00
 imports:
 - name: github.com/masaruz/engine-lib
-  version: 53ae877bc5da077fd340adb3f8b61d47a80b9596
+  version: 4bcaf70d1553d58a44ae46599cdfebd3da465753
 testImports: []

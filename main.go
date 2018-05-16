@@ -3,12 +3,12 @@ package main
 import (
 	"fmt"
 
-	"github.com/masaruz/engine-lib"
+	"github.com/masaruz/engine-lib/core"
 )
 
-type form = lib.Form
+type form = core.Form
 
-type ack = lib.Ack
+type ack = core.Ack
 
 type game struct{}
 
