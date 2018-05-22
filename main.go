@@ -26,9 +26,9 @@ func (g *game) Update(msg []byte, callback ack) error {
 	return nil
 }
 
-func (g *game) GetState() ([]byte, error) {
+func (g *game) GetState() []byte {
 	fmt.Println("Bomberman Get State")
-	return []byte{}, nil
+	return []byte{}
 }
 
 func main() {}
