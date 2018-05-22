@@ -10,6 +10,8 @@ type ack = core.Ack
 
 type game struct{}
 
+var _msg []byte
+
 func (g *game) Init() error {
 	fmt.Println("Bomberman Initiated")
 	return nil
@@ -21,14 +23,15 @@ func (g *game) Start() error {
 }
 
 func (g *game) Update(msg []byte, callback ack) error {
-	fmt.Printf("Bomberman Updated With Message %s\n", string(msg))
+	_msg = msg
+	fmt.Printf("Bomberman Updated With Message %s\n", string(_msg))
 	callback("acknowledge")
 	return nil
 }
 
 func (g *game) GetState() []byte {
 	fmt.Println("Bomberman Get State")
-	return []byte{}
+	return _msg
 }
 
 func main() {}
