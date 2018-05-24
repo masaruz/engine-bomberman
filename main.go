@@ -1,37 +1,51 @@
 package main
 
 import (
-	"fmt"
+	"encoding/json"
+	"engine-bomberman/lib"
+	"engine-bomberman/model"
 
+	"github.com/masaruz/engine-lib/common"
 	"github.com/masaruz/engine-lib/core"
 )
 
-type ack = core.Ack
+type (
+	ack  = core.Ack
+	game struct{}
+)
 
-type game struct{}
-
-var _msg []byte
+var (
+	_message   []byte
+	_gamestate model.GameState
+)
 
 func (g *game) Init() error {
-	fmt.Println("Bomberman Initiated")
+	_gamestate = lib.InitGameState()
+	common.Print("Bomberman Initiated")
 	return nil
 }
 
 func (g *game) Start() error {
-	fmt.Println("Bomberman Started")
+	common.Print("Bomberman Started")
 	return nil
 }
 
 func (g *game) Update(msg []byte, callback ack) error {
-	_msg = msg
-	fmt.Printf("Bomberman Updated With Message %s\n", string(_msg))
+	action := &model.Action{
+		Payload: msg,
+	}
+	json.Unmarshal(msg, action)
+	// In case command is just sync the state
+	_gamestate = lib.GameStateReducer(_gamestate, action)
+	_message = lib.MessageReducer(_gamestate, action)
+	common.Printf("Bomberman Updated With Message %s\n", string(_message))
 	callback("acknowledge")
 	return nil
 }
 
 func (g *game) GetState() []byte {
-	fmt.Println("Bomberman Get State")
-	return _msg
+	common.Print("Bomberman Get State")
+	return _message
 }
 
 func main() {}
