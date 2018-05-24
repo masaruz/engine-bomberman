@@ -1,7 +1,7 @@
 package lib
 
 import (
-	"engine-bomberman/model"
+	"github.com/masaruz/engine-bomberman/model"
 )
 
 // Value convert map to array

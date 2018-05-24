@@ -1,6 +1,6 @@
 package model
 
-import "engine-bomberman/constant"
+import "github.com/masaruz/engine-bomberman/constant"
 
 // SyncMessage contain players' data to send to engine
 type SyncMessage struct {

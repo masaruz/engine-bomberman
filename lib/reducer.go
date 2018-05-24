@@ -2,8 +2,9 @@ package lib
 
 import (
 	"encoding/json"
-	"engine-bomberman/constant"
-	"engine-bomberman/model"
+
+	"github.com/masaruz/engine-bomberman/constant"
+	"github.com/masaruz/engine-bomberman/model"
 )
 
 // GameStateReducer will reduce for command and produce new state

@@ -1,6 +1,6 @@
 package model
 
-import "engine-bomberman/constant"
+import "github.com/masaruz/engine-bomberman/constant"
 
 // Action of this server in each state
 type Action struct {

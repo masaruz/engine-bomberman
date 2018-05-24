@@ -2,8 +2,9 @@ package main
 
 import (
 	"encoding/json"
-	"engine-bomberman/lib"
-	"engine-bomberman/model"
+
+	"github.com/masaruz/engine-bomberman/lib"
+	"github.com/masaruz/engine-bomberman/model"
 
 	"github.com/masaruz/engine-lib/common"
 	"github.com/masaruz/engine-lib/core"
