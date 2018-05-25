@@ -2,10 +2,11 @@ package lib_test
 
 import (
 	"encoding/json"
-	"engine-bomberman/constant"
-	"engine-bomberman/lib"
-	"engine-bomberman/model"
 	"testing"
+
+	"github.com/masaruz/engine-bomberman/constant"
+	"github.com/masaruz/engine-bomberman/lib"
+	"github.com/masaruz/engine-bomberman/model"
 )
 
 func TestGameStateReducer(t *testing.T) {

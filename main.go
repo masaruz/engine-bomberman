@@ -38,7 +38,8 @@ func (g *game) Update(msg []byte, callback ack) error {
 	json.Unmarshal(msg, action)
 	// In case command is just sync the state
 	_gamestate = lib.GameStateReducer(_gamestate, action)
-	_message = lib.MessageReducer(_gamestate, action)
+	// _message = lib.MessageReducer(_gamestate, action)
+	_message = msg
 	common.Printf("Bomberman Updated With Message %s\n", string(_message))
 	callback("acknowledge")
 	return nil
