@@ -18,9 +18,11 @@ type (
 var (
 	_message   []byte
 	_gamestate model.GameState
+	_number    int
 )
 
 func (g *game) Init() error {
+	_number = 1000
 	_gamestate = lib.InitGameState()
 	common.Print("Bomberman Initiated")
 	return nil
@@ -46,8 +48,11 @@ func (g *game) Update(msg []byte, callback ack) error {
 }
 
 func (g *game) GetState() []byte {
-	common.Print("Bomberman Get State")
-	return make([]byte, 2000)
+	_number++
+	tmp := make([]byte, 2000)
+	tmp[0] = byte(_number)
+	common.Printf("Bomberman Get State v%d", _number)
+	return tmp
 }
 
 func main() {}
