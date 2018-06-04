@@ -47,7 +47,7 @@ func (g *game) Update(msg []byte, callback ack) error {
 
 func (g *game) GetState() []byte {
 	common.Print("Bomberman Get State")
-	return _message
+	return make([]byte, 2000)
 }
 
 func main() {}
